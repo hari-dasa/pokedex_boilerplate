@@ -4,9 +4,10 @@ import './Header.scss';
 export type HeaderProps = {
     title?: string;
     icon?: ReactNode;
+    size?: BigInteger;
 }
 
-const Header = ({ title, icon }: HeaderProps) => {
+const Header = ({ title, icon, size }: HeaderProps) => {
     return (
         <header className="header">
             <div className="icons">

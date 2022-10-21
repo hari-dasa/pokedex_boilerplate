@@ -1,6 +1,6 @@
-import {Button, expandRecordPickerAsync, FormField, RecordCardList, Box, useBase, useRecords, useGlobalConfig, Icon} from '@airtable/blocks/ui';
-import React, { useEffect, useState } from 'react';
-import { Alert, Card, Tab } from 'react-bootstrap';
+import {Button, FormField, RecordCardList, Box, useGlobalConfig, Icon} from '@airtable/blocks/ui';
+import React, { useState } from 'react';
+import { Alert, Card } from 'react-bootstrap';
 import { Accessors } from './Accessors';
 import PokemonTableDataHandle from './PokemonDataHandle';
 import "./PokemonView.scss";

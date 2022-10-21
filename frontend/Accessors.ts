@@ -21,14 +21,11 @@ export class Accessors
         return this.getBase().getTableByNameIfExists(tableName);
     };
     
-    getRecords(sorts = null, viewName = null, byId = null) {
-        // const table = getTable(tableName);
-    
+    getRecords() {
         return useRecords(this.table);
     };
     
-      SelectRecords(fieldName, viewName = null) {
-        // const table = getTable(tableName);;
+      SelectRecords(fieldName) {
         const queryResult = this.table.selectRecords({
             sorts: [{field: fieldName}],
             fields: [fieldName]
@@ -36,8 +33,7 @@ export class Accessors
         return useRecords(queryResult);
     };
     
-      getFields(fields = null){
-    
+    getFields(fields = null){
         if(!fields)
             return this.table.fields;
     

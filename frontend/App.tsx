@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { Icon, useGlobalConfig, useSettingsButton } from "@airtable/blocks/ui";
-import { useState } from "react";
-import Settings, {capitalizePrototypeConfig, isMainKeysSetted}  from "./Settings";
+import { Alert, Tab, Tabs } from "react-bootstrap";
 import { CupStraw, PersonWorkspace } from "react-bootstrap-icons";
+
+import Settings, {capitalizePrototypeConfig, isMainKeysSetted}  from "./Settings";
 import Header from "./Header";
 import './App.scss';
-import { globalConfig } from "@airtable/blocks";
 import useCustomColors from "./useCustomColors";
 import PokemonView from "./PokemonView";
-import { Alert, Card, Tab, Tabs } from "react-bootstrap";
 
 const App = () => {
     const [configSetted, setConfigSetted] = useState(false);
